@@ -1,0 +1,35 @@
+// 4.1.- Quins valors s'escriuran a la consola després d'executar aquest codi?
+let a = 25;// 25 
+let b = 15 + a; // 15 + 25= 40
+let c = b * 2; // 40 * 2= 80
+console.log(a, b, c); //25, 40, 80
+
+// 4.2.- Quins valors s'escriuran a la consola després d'executar aquest codi?
+a = 10; //10
+b = 20; //20
+c = 5; //5
+a = a + 3; //13
+b = b + 4 - a; //11
+c = a + b + c; // 13+11+5=29
+a = a + c;// 13+29=41
+b = 4;
+c = c + 3 - b + 2; //43-11+2=34
+console.log(a, b, c); //41, 4, 34
+
+// 4.3.- Quins valors s'escriuran a la consola després d'executar aquest codi?
+
+a = 5; //5
+b = 18; //18
+c = 15; //15
+d = 22; //22
+a = a + 10; //15
+console.log(a);
+b = b + 5 - c; //18 + 5 - 15 = 8
+c = c + 4 + b; //15 + 4 + 8 = 27
+d = d + b + a; // 22+8+15=45
+a = a + 1;// 16
+b = b + c;// 8+27= 35
+c = b + c; // 35+27= 52
+d = b + b; // 35+35=70
+
+console.log(a,b,c,d); // 16, 35, 52, 70
