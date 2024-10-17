@@ -1,0 +1,6 @@
+let hora=1;
+let text;
+if (hora>0 $$ hora<9) {
+    text="BONA NIT";
+    console.log(text);
+}
