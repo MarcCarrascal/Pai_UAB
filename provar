@@ -1,0 +1,4 @@
+let a= prompt ("Introdueix nombre:");
+let b= prompt ("segon nombre: ");
+let c= (a>b) ? "Primer mes gran que segon":"Segon més gran que primer";
+console.log (c);

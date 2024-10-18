@@ -1,0 +1,18 @@
+11.1.- Explica el que fa aquest programa.
+let a = prompt ("Introdueix un número"); // Li demanem a l'usuari que introduiexi un numero i s'apliacara a la variable a
+let b = (a>=18) ? "Ets major d’edat":"No ets major d’edat"; // es compara si "a" es major a 18
+console.log (b); // Per pantalla et diu si ets o no major d'edat
+
+11.2.- Escriu un programa que demani dos números (fent servir la instrucció prompt) i 
+escrigui a la consola qual és el més gran. Fes servir l’operador interrogant (?)
+let a= prompt ("Introdueix nombre:");
+let b= prompt ("segon nombre: ");
+let c= (a>b) ? "Primer mes gran que segon":"Segon més gran que primer";
+console.log (c);
+
+11.3.- Escriu un programa que demani dues paraules (fent servir la instrucció prompt) i ens 
+digui si les dues paraules són iguals.
+let a= prompt ("paraula 1");
+let b= prompt ("paraula 2");
+let r= (a=b) ? "Les paraules son iguals":"Les paraules son diferents";
+console.log (r);
