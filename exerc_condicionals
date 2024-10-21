@@ -14,5 +14,34 @@ console.log (c);
 digui si les dues paraules són iguals.
 let a= prompt ("paraula 1");
 let b= prompt ("paraula 2");
-let r= (a=b) ? "Les paraules son iguals":"Les paraules son diferents";
-console.log (r);
+if (a==b){
+    console.log("Les paraules son iguals");
+}
+else{
+    console.log("No son iguals");   
+}
+
+12.1.- Fes un programa que, donat un número (que demanarem per pantalla fent servir 
+    prompt() escrigui a la consola el doble, el triple i el quadrat del número llegit. 
+let a = prompt ("Digam un numero: ");
+let r= a*a;
+let s= a*a*a;
+let t= a*a*a*a;
+console.log(r,s,t);
+
+12.2.- Fes un programa en JavaScript que calculi el perímetre i l’àrea d’un rectangle de 20 i 
+80 metres de costat. Modifica el programa perquè els valors dels costats es demanin amb 
+prompt().
+let a=20
+let b=80
+let per= a+a+b+b
+let ar= a*b
+console.log(per,ar) 
+
+modificat:
+let a = prompt("un costat")
+let b = prompt ("altre costat")
+let per = a+a+b+b
+let ar = a*b
+console.log(per,ar) 
+

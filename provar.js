@@ -1,8 +1,9 @@
-let a= prompt ("paraula 1");
-let b= prompt ("paraula 2");
-if (a==b){
-    console.log("Les paraules son iguals");
+let a= prompt("Digam un numero");
+let anum= parseFloat(a)
+if (anum>=0){
+    console.log("positiu");
 }
+
 else{
-    console.log("No son iguals");   
+    console.log("negatiu");
 }

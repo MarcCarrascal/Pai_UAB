@@ -1,0 +1,11 @@
+13.1.- Escriu un programa que donat un número llegit amb prompt escrigui el missatge “el 
+número llegit és negatiu” si el número és més petit que zero.
+let a= prompt("Digam un numero");
+let anum= parseFloat(a)
+if (anum>=0){
+    console.log("positiu");
+}
+
+else{
+    console.log("negatiu");
+}
