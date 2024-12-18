@@ -1,3 +1,4 @@
+IF:
 13.1.- Escriu un programa que donat un número llegit amb prompt escrigui el missatge “el 
 número llegit és negatiu” si el número és més petit que zero.
 let a= prompt("Digam un numero");
@@ -9,3 +10,250 @@ if (anum>=0){
 else{
     console.log("negatiu");
 }
+13.2.- Escriu un programa que donat un número llegit amb prompt, escrigui el missatge “el 
+número llegit és parell” si el número es parell.
+
+let a= prompt("Digam un numero");
+let anum= parseFloat(a);
+if (anum%2==0){
+    console.log("El nombre es parell");
+}
+else{
+    console.log("Es imparell");
+}
+
+13.5.- Escriu un programa que, donat tres número llegits amb prompt, escrigui a la consola 
+el més gran dels tres. Pista: fes servir tres if cadascun d’ells per comprovar si un dels 
+números és el més gran.
+
+let primer= prompt("Primer nombre: ");
+let segon= prompt("Segon nombre: ");
+let tercer= prompt("Tercer nombre: ");
+let tercernum= parseFloat(tercer);
+let segonnum= parseFloat(segon);
+let primernum= parseFloat(primer);
+if(primernum>=segonnum & primernum>=tercernum){
+    console.log("El primer nombre es el mes gran");
+}
+else if (segonnum>=primernum & segonnum>=tercernum) {
+    console.log("El segon es el mes gran");
+} 
+else {
+    console.log("El tercer es el mes gran");
+}
+
+13.4.- Escriu un programa que, donat dos números llegits amb prompt, escrigui a la consola 
+el més gran de tots dos. Pista: fes servir dos if un per comprovar si el primer número és més 
+gran que el segon i l’altre per comprovar si el segon número és més gran que el primer.
+
+let num1= parseFloat(prompt("Digues el primer nombre: "))
+let num2= parseFloat(prompt("Digues el segon nombre: "))
+if(num1>=num2){
+    console.log("primer nombre més gran")
+}else{
+    console.log("Segon nombre més gran")
+}
+
+ELSE - IF":
+
+14.6.- En un control d’alcoholèmia necessiten un programa que els hi digui si una persona 
+pot conduir o no. El programa demanarà dues dades: Si la persona té carnet de conduir i el 
+valor que ha sortit a la prova d’alcoholèmia. El programa ha de respondre que sí pot conduir 
+si té carnet de conduir i la prova d’alcoholèmia ha donat un valor inferior a 0.25
+
+let carnet= prompt("Te cernet?")
+let taxa= parseFloat(prompt("taxa d'alcoholemia: "))
+if(carnet==="si" && taxa<= 0.25 ){
+    console.log("Pot conduir")
+}
+else{
+    console.log("no pot conduir")
+}
+
+14.8.- Escriu un programa que simuli la compra a una web. L’usuari haurà d’introduir una 
+quantitat (el que cal pagar) per teclat fent servir la instrucció prompt.
+En cas que la quantitat sigui 30€ o més, es mostrarà a la consola un missatge indicant que 
+el cost total és de 30€ donat que el transport és gratis.
+En cas que la quantitat sigui inferior a 30€, es mostrarà un missatge dient el preu total que 
+consistirà en l’introduït més 4.95€ en concepte de cost d’enviament.
+
+let preu= parseFloat(prompt("Preu del que has comprat?:"))
+if (preu>=30){
+    console.log("Preu total," + preu, "ENIVAMENT GRATUIT")
+}
+else if(preu<30){
+    preu=preu+4.95;
+    console.log("Preu final," + preu, "cost d'enviament 4.95" )
+}
+else{
+    console.log("Dades mal introduïdes")
+}
+
+14.9.- Un usuari va a una gelateria i per calcular el cost del seu gelat té un ordinador on 
+posa dues dades:
+1. Si vol un conus (c) o una terrina (t). El conus té un cost base de 3.45 i la terrina de 
+3.95
+2. Quin d’aquests sabors vol:
+1. Vainilla o Xocolata. No cal afegir res
+2. Turró, Menta o Oreo. Caldrà afegir 0.5 al preu final.
+3. Crema, Gerds o Ametlles. Caldrà afegir 1 al preu final.
+Si l’usuari posa alguna dada malament, el missatge que es posarà a la consola serà “Error 
+dades mal introduïdes”
+Si totes les dades són correctes, escriurà el preu final.
+
+let tria1= prompt("PREM (c) si vols un conus o (t) si vols tarrina");
+let preuFinal=0 
+if(tria1==="c"){
+    preuFinal = 3.45;
+    let sabor= prompt("Quin gust vols? Vainilla (V), Xocolata (X), Turró (+1€) (T), Menta (+1€) (M) o Oreo (+1€) (O):");
+    if(sabor === "V" || "X"){
+        preuFinal= preuFinal + 0
+        console.log(preuFinal) 
+    }
+    else if(sabor==="T"||"M"||"O"){
+        preuFinal= preuFinal+1
+        console.log(preuFinal)
+    }
+    else{
+        console.log("Dades incorrectes")
+    }
+}
+else if(tria1=="t"){
+    preuFinal== 3.95;
+    let sabor= prompt("Quin gust vols? Vainilla (V), Xocolata (X), Turró (+1€) (T), Menta (+1€) (M) o Oreo (+1€) (O):")
+    if(sabor=== "V" || "X"){
+        console.log("3,95") 
+    }
+    else if(sabor==="T"||"M"||"O"){
+        preuFinal= preuFinal+1
+        console.log("preu 4,95")
+    }
+    else{
+        console.log("Dades incorrectes")
+    }
+
+}
+else{
+    console.log("Error, no has triat bé les dades")
+}
+MAL FET REPASSAR
+
+14.5.- Escriu un programa que, donats tres números llegits amb prompt, escrigui a la 
+consola els tres números ordenats. 
+
+let numer1= prompt("Digues un primer nombre:")
+let numer2= prompt("Digues un segon nombre: ")
+let numer3= prompt("Digues un tercer nombre: ")
+let numer11= parseFloat(numer1)
+let numer22=parseFloat(numer2)
+let numer33=parseFloat(numer3)
+if(numer11>=numer22 && numer22>=numer33){
+    console.log(numer1,numer2,numer3)
+}
+else if(numer22>=numer11 && numer11>=numero33){
+    console.log(numer22,numer11,numer33)
+}
+
+SWITCH 
+
+15.1.- Fent servir la instrucció switch escriu un programa que donat amb prompt un número 
+de mes, entre 1 i 12, escrigui per pantalla el nom del mes que correspon.
+
+let num= parseInt(prompt("Digues el numero de mes"))
+switch(num){
+    case 1:
+        text = "Gener"
+        break
+    case 2:
+        text = "Febrer" 
+        break
+    case 3:
+        text = "Març"
+        break
+    case 4:
+        text = "abril"
+        break
+}
+console.log (text)
+
+FOR 
+
+16.1.- Escriu, fent servir la instrucció for, un programa que escrigui a la consola 10 cops el 
+text “Estem fent bucles”. 
+
+
+let text=""
+let i
+for(i=0,i<=10,i++){
+    text="Estem fent bucles"+"<br>"
+    
+}
+console.log(text)
+
+16.2.- Escriu, fent servir la instrucció for, un programa que escrigui a la consola tots els 
+nombres del 5 al 20.
+
+for (i=5;i<= 20;i++){
+    console.log(i)
+}
+
+16.3.- Escriu un programa que, donat un nombre N, escrigui a la consola la suma de tots els 
+nombres entre 1 i N.
+
+let num= parseFloat(prompt("Digues un nombre:"))
+i=1
+sum=0
+for(i=1;i===num;i++){
+    sum=sum+i
+}
+console.log(sum)
+
+16.4.- Escriu un programa que, donat un nombre N, escrigui a la consola el factorial 
+d’aquest nombre. El factorial és la multiplicació de tots els números entre 1 i N. 
+
+let num= parseFloat(prompt("digeus un nombre i fare el factorial: "))
+let multi=1
+let i=1
+for(i=1;i<=num-1;i++){
+    
+    multi+=multi*i;
+}
+console.log(multi)
+
+16.5.- Escriu un programa que, donat dos números N i M (on N sempre serà menor que M) 
+calculi la suma de tots els números entre N i M (ambdós inclosos).
+
+let N= parseFloat(prompt("primer nombre"));
+let M= parseFloat(prompt("Segon nombre"));
+let suma=0
+for(i=N;i<=M;i++){
+    suma+=suma+N
+}
+console.log(suma)
+
+WHILE
+
+17.1.- Escriu, fent servir la instrucció while, un programa que escrigui a la consola 10 cops el 
+text “Estem fent bucles”. 
+
+let i=0
+let text=""
+while (i<=10){
+    text += "Estem fent bucles"
+    i++;
+    console.log(text)
+}
+
+17.2.- Escriu, fent servir la instrucció while, un programa que escrigui a la consola tots els 
+nombres del 5 al 20.
+
+let i=5;
+while (i<=20){
+    console.log(i+ "");
+    i++;
+}
+
+17.3.- Escriu un programa, fent servir la instrucció while, que, donat un número N, escrigui a 
+la consola tots els números de N a 1 (per tant, en ordre descendent). Observa el que passa 
+si N < 1
+

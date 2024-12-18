@@ -1,0 +1,28 @@
+EXERCICIS OBJECTES:
+
+EXEMPLE 
+class Empresa { 
+constructor (nom,adreca){ 
+this.nom = nom; 
+this.adreca = adreca; 
+this.deute = 0; // Quan creem l'empresa té deute 0
+    } 
+    incrementaDeute(n){ 
+    this.deute += n; 
+    } 
+    totPagat(){ 
+    this.deute = 0; 
+    } 
+} 
+class Paquet { 
+    constructor(origen,destinacio,cost){ 
+    this.origen = origen; 
+    this.destinacio = destinacio; 
+    this.cost = cost; 
+    this.lliurat = false; 
+    } 
+    lliuramentFet() { 
+    this.origen.incrementaDeute(this.cost); 
+    this.lliurat = true; 
+    } 
+} 

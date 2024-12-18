@@ -1,0 +1,22 @@
+EXERCICIS FUNCIONS:
+ 
+function parells(num){
+  let parell = True;
+  if(num%2==0){
+  return (parell)
+  }
+  else{
+  parell= False;
+  }
+  return (parell);
+}
+
+/*Exercici 3.2
+Escriu un script que comprovi si un any donat és de traspàs. Un any és de traspàs si és múltiple de 4,
+excloent els que siguin múltiples de 100, però no els que siguin múltiples de 400.
+Per exemple, l'any 1900 no va ser de traspàs, el 2000 sí i el 2100 no ho és.  */
+
+function traspàs(num){
+let traspàs = true;
+}
+

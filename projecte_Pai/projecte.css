@@ -1,0 +1,15 @@
+h1{color:rgb(9, 40, 58); text-align: center;text-decoration: underline;}
+body{
+    color:rebeccapurple;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: large;
+    background-color: aquamarine;
+}
+#esborrar{background-color: red;color: white;}
+#enviar{background-color: green;color: white;}
+#edat{background-color: blue;color: white;}
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
