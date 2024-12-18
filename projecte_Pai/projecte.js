@@ -39,7 +39,16 @@ nom.value = paraules.join(" "); // Reassignem el valor al camp
     }
 
     // es comprova que nomes hi ha 5 digits
-    //
+    const postal = document.getElementById("codi-postal");
+    for (let i = 0; i < postal.length  ; i++ ) {
+        if ( i < 5){
+            document.getElementById("error-codi").textContent="error 5 digits";
+        }
+        else{
+            document.getElementById("error-codi").textContent="";
+        }
+
+    }
         
     
     // comprova que el correu te @, nomes una i un punt despres de @
