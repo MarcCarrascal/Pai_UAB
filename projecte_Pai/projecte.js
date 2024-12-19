@@ -1,13 +1,7 @@
 document.getElementById("enviar").addEventListener("click", enviarFormulari);
 document.getElementById("esborrar").addEventListener("click", esborrarFormulari);
-//llegim totes les variables del formulari
 
 
-
-
-const password = document.getElementById("contrasenya");
-const confirmPassword = document.getElementById("confirmar-contrasenya");
-const privacitat = document.getElementById("privacitat");
 const resultat = document.getElementById("resultat");
 
 // creem la funció enviar formulari dins d'ella hi ha totes les accions per enviar el formulari
@@ -57,7 +51,7 @@ nom.value = paraules.join(" "); // Reassignem el valor al camp
         document.getElementById("error-email").textContent="";
     }
 
-    //Contrasenya
+    //Contrasenya FET AMB CHATGPT 
     const password = document.getElementById("contrasenya");
     if (!validatePassword(password.value)) {
         document.getElementById("error-contrasenya").textContent="error-contrasenya."+"La contrasenya ha de tenir almenys 8 caràcters, una majúscula, una minúscula, dos dígits i un caràcter especial.";
@@ -85,6 +79,7 @@ nom.value = paraules.join(" "); // Reassignem el valor al camp
 
         return hasUpperCase && hasLowerCase && digitCount >= 2 && hasSpecialChar;
     }
+    //Mostrar contrasenya
 
 
     //Contrasenyas iguals
