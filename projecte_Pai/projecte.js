@@ -38,7 +38,7 @@ nom.value = paraules.join(" "); // Reassignem el valor al camp
     }
 
     // es comprova que nomes hi ha 5 digits
-    const postal = document.getElementById("codi-postal");
+    const postal = document.getElementById("codi");
     if (postal.value.length !== 5) { // Comprovem si la longitud és diferent de 5
         document.getElementById("error-codi").textContent = "El codi postal ha de tenir exactament 5 dígits.";
         error=true
@@ -58,12 +58,38 @@ nom.value = paraules.join(" "); // Reassignem el valor al camp
     }
 
     //Contrasenya
-    
+    const password = document.getElementById("contrasenya");
+    if (!validatePassword(password.value)) {
+        document.getElementById("error-contrasenya").textContent="error-contrasenya."+"La contrasenya ha de tenir almenys 8 caràcters, una majúscula, una minúscula, dos dígits i un caràcter especial.";
+        error=true;
+    }
+    else{
+        document.getElementById("error-contrasenya").textContent="";
+    }
+    function validatePassword(password) {
+        let hasUpperCase = false;
+        let hasLowerCase = false;
+        let digitCount = 0;
+        let hasSpecialChar = false;
+        const specialChars = "!@#$%^&*()_+[]{}|;:',.<>?/";
+
+        if (password.length < 8) return false;
+
+        for (let i = 0; i < password.length; i++) {
+            const char = password[i];
+            if (char >= "A" && char <= "Z") hasUpperCase = true;
+            else if (char >= "a" && char <= "z") hasLowerCase = true;
+            else if (char >= "0" && char <= "9") digitCount++;
+            else if (specialChars.includes(char)) hasSpecialChar = true;
+        }
+
+        return hasUpperCase && hasLowerCase && digitCount >= 2 && hasSpecialChar;
+    }
+
 
     //Contrasenyas iguals
-    const password = document.getElementById("contrasenya");
     const confirmPassword = document.getElementById("confirmar-contrasenya");
-    if (password!==confirmPassword) {
+    if (password.value!==confirmPassword.value) {
         document.getElementById("error-confirmar").textContent="Les contrasenyes no coincideixen";
         error=true
     }
@@ -73,7 +99,7 @@ nom.value = paraules.join(" "); // Reassignem el valor al camp
 
     //privacitat
     const privacitat = document.getElementById("privacitat");
-    if (!privacitat.checkVisibility) {
+    if (!privacitat.checked) {
         document.getElementById("error-privacitat").textContent="Falta confirmar privacitat";
         error=true
     }
@@ -89,9 +115,10 @@ nom.value = paraules.join(" "); // Reassignem el valor al camp
 
 }
 
+
   
 function esborrarFormulari () {
-    form.reset();
+    document.getElementById("formulari").reset();
     document.querySelectorAll(".error").forEach((error) => (error.textContent = ""));
     document.getElementById("resultat").textContent="";
 }
